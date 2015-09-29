@@ -1,0 +1,25 @@
+#include "stdio.h"
+#include "conio.h"
+
+main()
+{
+    int x = 5, y = 10;
+    printf("x=%d,y=%d\n",x,y);
+
+    exchange(&x,&y);
+    printf("x=%d,y=%d\n",x,y);
+
+
+    getch();
+}
+exchange(int * u,int * v)
+{
+    int temp;
+    printf("u=%d,v=%d\n",*u,*v);
+    temp = *u;
+    *u = *v;
+    *v = temp;
+    printf("u=%d,v=%d\n",*u,*v);
+
+}
+//显示 5，10 5,10 10,5 10,5
