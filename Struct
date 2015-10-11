@@ -1,0 +1,26 @@
+struct student{
+int a;
+int b;
+}          //结构体定义
+
+struct student{
+int a;
+int b;
+}stu;      //结构体定义并实例stu对象
+
+struct student stu;   //结构体实例stu对象（一般方法）
+student stu;          //C++可用方法
+
+struct student stu[size]  //结构体数组
+
+struct student * stu1;    //结构体指针stu1
+
+stu1 = &stu;              //指向结构体数组的结构体指针
+(*stu1).a = stu1->a = stu.a
+
+stu1 = stu                //stu为数组名，是数组的第一个变量的地址
+*stu1 = stu[0]            //指针stu1的是第一个数组变量stu[0]的值
+
+stu1 = (struct student *)malloc(n * sizeof(struct student));  //定义动态的结构体数组
+stu1 = (int *)malloc(n * sizeof(int *));  //定义动态数组
+
