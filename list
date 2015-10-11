@@ -1,0 +1,43 @@
+struct stu{
+  int name;
+  int num;
+  struct stu * next;
+};
+//定义静态链表
+int main(){
+  struct stu a,b,c *head;
+  head = &a;
+  a.next = &b;
+  b.next = &c;
+  c.next = &NULL;
+  
+  struct stu *p;
+  p = head;
+  while(p!=NULL){
+  p = p->next;       //指向下一个节点
+}
+
+//定义动态链表
+struct stu * create(){    //定义了返回值为结构体指针 struct stu * ，create是创建链表函数
+  struct stu * head;
+  struct stu * p1, * p2;
+  int n = 0;
+  p1=p2=(struct stu *)malloc(sizeof(struct stu));
+  head = NULL;
+  while(p1->name){
+  n++;
+  if(n==1)
+  head=p1;
+  else
+  p2->next = p1;
+  
+  p2 = p1;
+  p1=(struct stu *)malloc(sizeof(struct stu));
+  }
+  p2->next = NULL;
+  return(head);
+}
+int main(){
+  struct stu *p;
+  p = creat();
+}
