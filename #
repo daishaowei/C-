@@ -1,0 +1,9 @@
+#define  A(a,b) (a+b)
+  int i = i;
+  int j = 2;
+  int c = A(i,j);  //预编译中单纯的替换，不用考虑参数类型
+  
+#undef  //取消宏
+
+typedef int * i;
+i p1,p2;
