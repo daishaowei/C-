@@ -1,6 +1,36 @@
 //传指针变量
 main()
 {
+    int * p1 = NULL;
+    text(p1);
+    printf("p1=%d\n",*p1);
+    getch();
+}
+text(int * p2)
+{
+    int a = 1;
+    p2 = &a;                    //p2指向a的地址
+    printf("p2=%d\n",*p2);
+}
+//p2=1，p1=0
+main()
+{
+    int * p1 = NULL;
+    text(p1);
+    printf("p1=%d\n",*p1);
+    getch();
+}
+text(int * p2)
+{
+    int a = 1;
+    *p2 = a;                   //把a的值赋给p2的地址
+    printf("p2=%d\n",*p2);
+}
+//p2=1，p1=1
+
+
+main()
+{
     int x = 5, y = 10;
     printf("x=%d,y=%d\n",x,y);
 
@@ -49,4 +79,4 @@ main()
    text(&a);
    printf("%d",a);
 }
-//输出a=2，*p=1 并没有改变原来参数a的值
+//输出a=2，*p=1 并没有改变原来参数a的值  被引用的变量是不会改变的
