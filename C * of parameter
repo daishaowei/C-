@@ -1,0 +1,52 @@
+//传指针变量
+main()
+{
+    int x = 5, y = 10;
+    printf("x=%d,y=%d\n",x,y);
+
+    exchange(&x,&y);
+    printf("x=%d,y=%d\n",x,y);
+
+
+    getch();
+}
+exchange(int * u,int * v)
+{
+    int temp;
+    printf("u=%d,v=%d\n",*u,*v);
+    temp = *u;
+    *u = *v;
+    *v = temp;
+    printf("u=%d,v=%d\n",*u,*v);
+
+}
+//显示 5，10 5,10 10,5 10,5
+
+//传指针变量
+void text(int * p2)
+{
+   *p2 = NULL;
+   printf("%d\n",*p2);
+}
+main()
+{
+   int * p1 = 2;
+   text(p1);
+   printf("%d",*p1);
+}
+//输出都为0 空值 改变了参数p1的值
+
+//传引用地址
+void text(int * p)
+{
+   int a = 1;
+   *p = a;
+   printf("%d",*p);
+}
+main()
+{
+   int a = 2;
+   text(&a);
+   printf("%d",a);
+}
+//输出a=2，*p=1 并没有改变原来参数a的值
